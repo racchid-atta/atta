@@ -13,14 +13,14 @@ var p = '1';
 if(typeof(c)=="undefined"){
 var c = '0';
 }
-var domain = 'http://infor-matiques.blogspot.com/';
+var domain = 'http://bro.adca.st';
 var alternate = 'http://bro.adca.st';
-var url = 'http://80.82.64.171:1935/cast4u/Dp51YIwd1e_7033/playlist.m3u8?sidendtime=1480432260&sidstarttime=0&sidhash=jGQPMUdF_gLOLiV0BcQXkJI1WzfW0r59P6GFbre_Luw=;
-var iframe='<iframe  src="http://80.82.64.171:1935/cast4u/Dp51YIwd1e_7033/playlist.m3u8?sidendtime=1480432260&sidstarttime=0&sidhash=jGQPMUdF_gLOLiV0BcQXkJI1WzfW0r59P6GFbre_Luw='" width="'+width+'" height="'+height+'" marginheight="0" marginwidth="0" frameborder="no" scrolling="no" allowtransparency="true"></iframe>';
+var url = '/stream.php?id='+id+'&cache=4&width='+width+'&height='+height+'&stretching='+stretching+'&p='+p+'&c='+c;
+var iframe='<iframe id="frame" src="'+domain+url+'" width="'+width+'" height="'+height+'" marginheight="0" marginwidth="0" frameborder="no" scrolling="no" allowtransparency="true"></iframe>';
 document.write(iframe);
 var myIframe = parent.document.getElementById("frame");
 myIframe.style.background = "black";
-if(domain != 'http://infor-matiques.blogspot.com/'){
+if(domain != 'http://bro.adca.st'){
     var oXHR = new XMLHttpRequest();
     oXHR.open('GET', domain+'/check/check.js', true);
     oXHR.onreadystatechange = function (oEvent) {  
